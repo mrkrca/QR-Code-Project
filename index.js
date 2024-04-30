@@ -9,13 +9,13 @@ inquirer
   .prompt([
     {
         message: "Enter URL here: ",
-        name: "URL",
+        name: "url",
     },
   ])
   .then((answers) => {
-    const url = answers.URL;
+    const url = answers.url;
     var qr_svg = qr.image(url);
-    qr_svg.pipe(fs.createWriteStream("qr_img.png"));
+    qr_svg.pipe(fs.createWriteStream("qr_img.png")); //Good Test
 
     fs.appendFile("Url.txt", url, + "\n",(err)=>{
         if(err) throw err;
