@@ -4,7 +4,6 @@ import qr from "qr-image";
 import fs from "fs";
 
 
-
 inquirer
   .prompt([
     {
@@ -21,10 +20,12 @@ inquirer
         if(err) throw err;
 
     console.log("File is saved! <3");
-        
+
+      
     });
 
 
+    
   })
   .catch((error) => {
     if (error.isTtyError) {
