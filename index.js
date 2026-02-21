@@ -24,7 +24,7 @@ inquirer
     
     });
 
-    
+
   })
   .catch((error) => {
     if (error.isTtyError) {
